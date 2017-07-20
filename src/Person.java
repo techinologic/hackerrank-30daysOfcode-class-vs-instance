@@ -3,17 +3,13 @@ import java.util.Scanner;
 public class Person {
     private int age;
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public Person(int initialAge) {
         // Add some more code to run some checks on initialAge
         if (initialAge < 0) { //if initialAge is negative, set age = 0;
             setAge(0);
+            System.out.println("Age is not valid, setting age to 0.");
         }
         setAge(initialAge);
-        System.out.println("Here age is: " +age);
     }
 
     public static void main(String[] args) {
@@ -32,25 +28,25 @@ public class Person {
         sc.close();
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public void amIOld() {
         // Write code determining if this person's age is old and print the correct statement:
-        System.out.println("This is age " +age);
-        if (age < 0) {
-            System.out.println("Age is not valid, setting age to 0.");
-        } else if (age < 13 && age > 0) {
+//        System.out.println("AGE here is " +age);
+        if (age < 13) {
             System.out.println("You are young.");
         } else if (age >= 13 && age < 18) {
             System.out.println("You are a teenager.");
         } else {
             System.out.println("You are old.");
         }
-
     }
 
     public void yearPasses() {
         // Increment this person's age.
-        age++;
+        this.age++;
     }
 
 }
