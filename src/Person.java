@@ -6,10 +6,10 @@ public class Person {
     public Person(int initialAge) {
         // Add some more code to run some checks on initialAge
         if (initialAge < 0) { //if initialAge is negative, set age = 0;
-            setAge(0);
+            age = 0;
             System.out.println("Age is not valid, setting age to 0.");
         }
-        setAge(initialAge);
+        age = initialAge;
     }
 
     public static void main(String[] args) {
@@ -28,10 +28,6 @@ public class Person {
         sc.close();
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public void amIOld() {
         // Write code determining if this person's age is old and print the correct statement:
 //        System.out.println("AGE here is " +age);
@@ -46,7 +42,7 @@ public class Person {
 
     public void yearPasses() {
         // Increment this person's age.
-        this.age++;
+        age++;
     }
 
 }
